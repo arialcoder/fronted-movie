@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  
+}
+
+body {
+    font-family: "poppins", Roboto, Helvetica, Arial, sans-serif;
+    position: relative;
+}
+
+/* img {
+    width: 100%;
+} */
+
+a {
+    text-decoration: none;
+    color: #f8eded;
+    display: block
+}
+
+a:link{
+    text-decoration:none;
+}
+a:hover{
+    color: rgba(231, 187, 40, 0.904);
+}
+
+.nav-link{
+    color: whitesmoke;
+}
+
+.header-bg{
+    background: linear-gradient(to right top, #0000008a, #0000008a), url(../assets/img/bg-01.jpg);
+    background-color: rgba(0, 0, 0, 0.726);   
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;    
+    height: 90vh;
+}
+
+.bg-filter {
+    object-fit: cover;
+    /* height: 500px; */
+    filter: brightness(50%);
+}
+
+.bg-page {
+    background: linear-gradient(to right top, #0000008a, #0000008a), url(../assets/img/tiles.jpg);
+    background-color: rgba(0, 0, 0, 0.726);   
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center center;    
+}
+.scroll-wrapper{
+    overflow-x: scroll;
+    overflow-y: hidden;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    /* padding: 0px 0px 40px 0px; */
+    white-space: nowrap;
+    margin-right: 30px;
+}
+
+
+.search{
+   margin-bottom: auto;
+   margin-top: auto;
+   height: 40px;
+   background-color: #fff;
+   border-radius: 40px;
+   padding: 10px;
+   border: none;
+}
+
+.search-icon{
+   height: 50px;
+   width: 50px;
+   float: right;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-radius: 50%;
+   color:white;
+   background-color:black;
+}
+    
+  
+.search-input {
+    border: 2px solid white;
+    border-radius: 25px;
+    color: #000000;
+    font-size: 1.2rem;
+    height: 50px;
+    margin: 20px 0px;
+    outline: none;
+    padding: 0px 20px;
+    width: auto;
+    transition: width 0.4s linear;    
+}
+
+.movie-item {
+    max-width: 100%;
+    margin-right: 20px;
+    color: white;
+}
+.movie-item:hover{
+    color: rgb(233, 153, 5);
+}
+.movie-poster {
+    border-radius: 20px;
+}
+
+.bg-search{
+    background-image: linear-gradient(#252b31 0%, #212529 100%);   
+}
+.btn-search{
+    border-color: rgba(204, 173, 0, 0.911);
+}
+.btn-sarch:hover{
+    background-color: yellow;
+}
+.rounded-1rem {
+    border-radius: 20rem;
+}
+
+
+@media (max-width: 767.98px) {
+    .header-bg{
+        
+        height: 50vh;
+    }
+}
