@@ -59,7 +59,7 @@ a:hover{
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    /* padding: 0px 0px 40px 0px; */
+    padding: 0px 0px 40px 0px;
     white-space: nowrap;
     margin-right: 30px;
 }
@@ -101,11 +101,23 @@ a:hover{
     transition: width 0.4s linear;    
 }
 
+.movie-grid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(2,1fr);
+    justify-items: center;
+    row-gap: 20px;
+  }
+
+
 .movie-item {
     max-width: 100%;
-    margin-right: 20px;
-    color: white;
+    margin-right: 20px;    
+    
+    display: inline-block;
+    transition: all 500ms;
 }
+
 .movie-item:hover{
     color: rgb(233, 153, 5);
 }
@@ -124,6 +136,17 @@ a:hover{
 }
 .rounded-1rem {
     border-radius: 20rem;
+}
+
+ /* Styles for register page  */
+ .inputError {
+    border: 1px solid #ff0000;
+ }
+.errorMessage {
+    color: #ff0000;
+    font-size: 0.8rem;
+    margin-top: 0px;
+    margin-bottom: 5px;   
 }
 
 
