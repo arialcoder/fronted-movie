@@ -77,10 +77,12 @@ function validarLogin(event){
                 var userLogin = usuarioEncontrado.username;
                 window.location.href = "../index.html";
             }
-        } 
+        } else {
+          alert("Credenciales no encontradas. Ya te registraste?")
+        }
     
       }else{
-        console.log("No se pudo enviar el formulario")
+        console.log("error login")
       }
 
  }
