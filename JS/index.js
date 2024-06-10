@@ -11,7 +11,7 @@ async function getData() {
 
     const res = await fetch("https://api.themoviedb.org/3/movie/upcoming?api_key=e63ca39ea18ae934663116c3327a04ce&language=en-US&page=1");
     const incomingMovies = await res.json();
-    //mostraPorPantalla(movies);
+    //mostrarPorPantalla(movies);
     console.log(incomingMovies.results)
     printCard(incomingMovies.results);
 }
@@ -44,8 +44,8 @@ function movieCard(array){
         card += `
         <div class="col">
             <div class="card movie-item">
-             <a href="./pages/details.html" class="">
-                <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" class="card-img " alt="${movie.name}">                
+             <a href="./pages/details.html" class="details">
+                <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" class="card-img alt="${movie.name}">                
                 </a> 
               </div>
             </div>
