@@ -1,17 +1,14 @@
-*{
+* {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;  
+    box-sizing: border-box;
 }
 
 body {
     font-family: "poppins", Roboto, Helvetica, Arial, sans-serif;
     position: relative;
+    overflow-x: hidden;
 }
-
-/* img {
-    width: 100%;
-} */
 
 a {
     text-decoration: none;
@@ -19,23 +16,39 @@ a {
     display: block
 }
 
-a:link{
-    text-decoration:none;
+a:link {
+    text-decoration: none;
 }
-a:hover{
+
+a:hover {
     color: rgba(231, 187, 40, 0.904);
 }
 
-.nav-link{
+.nav-link {
     color: whitesmoke;
 }
 
-.header-bg{
+#logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#logo .fa-film {
+    margin-right: 5px;
+}
+
+/* logo letter adjust size*/
+span {
+    font-size: 17px;
+}
+
+.header-bg {
     background: linear-gradient(to right top, #0000008a, #0000008a), url(../assets/img/bg-01.jpg);
-    background-color: rgba(0, 0, 0, 0.726);   
-    background-size:cover;
+    background-color: rgba(0, 0, 0, 0.726);
+    background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;    
+    background-position: center;
     height: 90vh;
 }
 
@@ -46,13 +59,14 @@ a:hover{
 }
 
 .bg-page {
-    background: linear-gradient(to right top, #0000008a, #0000008a), url(../assets/img/tiles.jpg);
-    background-color: rgba(0, 0, 0, 0.726);   
-    background-size:cover;
+    background: linear-gradient(to right top, #0000008a, #0000008a), url(../assets/img/bg-01.jpg);
+    background-color: rgba(0, 0, 0, 0.726);
+    background-size: cover;
     background-repeat: no-repeat;
-    background-position: center center;    
+    background-position: center center;
 }
-.scroll-wrapper{
+
+.scroll-wrapper {
     overflow-x: scroll;
     overflow-y: hidden;
     width: 100%;
@@ -65,31 +79,30 @@ a:hover{
 }
 
 
-.search{
-   margin-bottom: auto;
-   margin-top: auto;
-   height: 40px;
-   background-color: #fff;
-   border-radius: 40px;
-   padding: 10px;
-   border: none;
+.search {
+    margin-bottom: auto;
+    margin-top: auto;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 40px;
+    padding: 10px;
 }
 
-.search-icon{
-   height: 50px;
-   width: 50px;
-   float: right;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   border-radius: 50%;
-   color:white;
-   background-color:black;
+.search-icon {
+    height: 50px;
+    width: 50px;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: white;
+    background-color: black;
 }
-    
-  
+
+
 .search-input {
-    border: 2px solid white;
+    /* border: 2px solid white; */
     border-radius: 25px;
     color: #000000;
     font-size: 1.2rem;
@@ -98,61 +111,94 @@ a:hover{
     outline: none;
     padding: 0px 20px;
     width: auto;
-    transition: width 0.4s linear;    
+    transition: width 0.4s linear;
 }
 
 .movie-grid {
     display: grid;
-    grid-template-columns: repeat(4,1fr);
-    grid-template-rows: repeat(2,1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     justify-items: center;
     row-gap: 20px;
-  }
+}
 
+.card {
+    background: transparent;
+    transition: .3s ease-in-out;
+    --bs-card-border-width: 0 !important;
+    --bs-card-border-color: none !important;
+}
+
+.card:hover {
+    transform: scale(0.9);
+}
 
 .movie-item {
     max-width: 100%;
-    margin-right: 20px;    
-    
+    margin-right: 20px;
     display: inline-block;
     transition: all 500ms;
 }
 
-.movie-item:hover{
+.movie-item:hover {
     color: rgb(233, 153, 5);
 }
+
 .movie-poster {
-    border-radius: 20px;
+    transition: .3s ease-in-out;
 }
 
-.bg-search{
-    background-image: linear-gradient(#252b31 0%, #212529 100%);   
+.movie-poster img {
+    border-radius: 5px;
 }
-.btn-search{
+
+.movie-poster:hover {
+    transform: scale(0.9);
+}
+
+.bg-search {
+    background-image: linear-gradient(#252b31 0%, #212529 100%);
+}
+
+.btn-search {
     border-color: rgba(204, 173, 0, 0.911);
 }
-.btn-sarch:hover{
-    background-color: yellow;
+
+.btn-search:hover {
+    color: yellow;
 }
+
 .rounded-1rem {
     border-radius: 20rem;
 }
 
- /* Styles for register page  */
- .inputError {
+/* Styles for register page  */
+.inputError {
     border: 1px solid #ff0000;
- }
+}
+
 .errorMessage {
     color: #ff0000;
     font-size: 0.8rem;
     margin-top: 0px;
-    margin-bottom: 5px;   
+    margin-bottom: 5px;
 }
 
+.nav-item a:hover {
+    color: white !important;
+}
 
-@media (max-width: 767.98px) {
-    .header-bg{
-        
+@media (max-width: 766px) {
+
+    .bg-dark {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        gap: 1rem;
+    }
+
+    .header-bg {
         height: 50vh;
     }
 }

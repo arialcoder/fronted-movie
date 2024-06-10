@@ -1,115 +1,130 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>cacMovie</title>
-    <!-- Custom Styles -->
-    <link rel="stylesheet" href="./css/styles.css">
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <!-- FontAwesome -->
-    <script src="https://kit.fontawesome.com/5ce2677feb.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./assets/img/film-solid.svg" type="image/x-icon">
+  <title>CAC-Movies</title>
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="./css/styles.css">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <!-- FontAwesome -->
+  <script src="https://kit.fontawesome.com/5ce2677feb.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
   <header>
-       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container px-5">
-            <a class="navbar-brand" href="#!">cac-Movie</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#trending">Tendencias</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#!">Contact</a></li>
-                    <li class="nav-item"><a class="nav-link" id="login" href="/pages/login.html" >Login</a></li>
-                </ul>
-            </div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container px-5">
+        <div id="logo"> <!--Id for add logo animations-->
+          <a class="navbar-brand" href="#!"><i class="fa-solid fa-film" style="color: #FFF;"></i>
+            <span>CAC-Movies</span>
+          </a>
         </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span
+            class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#trending">Tendencias</a></li>
+            <li class="nav-item"><a class="nav-link" href="#!">Contact</a></li>
+            <li class="nav-item"><a class="nav-link" id="login" href="./pages/login.html">Login</a></li>
+          </ul>
+        </div>
+      </div>
     </nav>
   </header>
   <main>
-    <section class=" py-5 d-flex justify-content-center align-items-center header-bg" >
-        <div class=" px-5">
-            <div class="row gx-5 ">
-                <div class="col">
-                    <div class="text-center my-5">
-                        <h1 class="display-5 fw-bolder text-white mb-2">Películas y series ilimitadas</h1>
-                        <p class="lead fw-bolder text-light mb-4">Disfruta donde quieras.</p>
-                        <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
-                            <a class="btn btn-warning btn-lg px-4 me-sm-3" id="btnRegister" href="./pages/register.html">Registrate</a>                            
-                        </div>
-                    </div>
-                </div>
+    <section class=" py-5 d-flex justify-content-center align-items-center header-bg">
+      <div class=" px-5">
+        <div class="row gx-5 ">
+          <div class="col">
+            <div class="text-center my-5">
+              <h1 class="display-5 fw-bolder text-white mb-2">Películas y series ilimitadas</h1>
+              <p class="lead fw-bolder text-light mb-4">Disfruta donde quieras</p>
+              <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
+                <a class="btn btn-warning btn-lg px-4 me-sm-3" id="btnRegister"
+                  href="./pages/register.html">Registrate</a>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </section>
     <!-- Search Section -->
     <section id="" class="py-5 text-center bg-search">
-        <div class="container p-5">
-          <div class="row justify-content-center">
-            <div class="col-lg-6 d-flex flex-column justify-content-center">
-               <h2 class="fw-bold mb-5 text-white">¿Qué estas buscando para ver?</h2>
-               <form class="" id="search">
-              
-                <div class="row">
-                    <div class="col">
-                        <input class="form-control form-control-lg rounded-pill" type="text" placeholder="Buscar.." />
-                    </div>
-                    <div class="col-auto"><button class="btn btn-outline-warning btn-lg rounded-pill btn-search" id="submitButton" type="submit">Buscar</button></div>
-                </div>              
-                
-                </form>
-             </div>
-            </div>           
-          </div>            
-        </div>        
-      </section>
-      <!-- Trending Section -->
-      <section id="trending" class="bg-dark py-5">
-        <div class="section-trending container-md mt-0 mt-lg-5 text-bg-light bg-dark">
-          <h3 class="fw-bold text-white">Trending Movies </h3>
-          <div id="movie-card" class="movie-grid mb-5">             
+      <div class="container p-5">
+        <div class="row justify-content-center">
+          <div class="col-lg-6 d-flex flex-column justify-content-center">
+            <h2 class="fw-bold mb-5 text-white">¿Qué estas buscando para ver?</h2>
+            <form class="" id="search">
 
-          </div>
-        </div>
-      </section>
-      <!-- Incoming Section -->
-      <section id="incoming" class="bg-dark py-5">
-        <div class="section-trending container-md mt-0 mt-lg-5 text-bg-light bg-dark">
-          <h3 class="fw-bold text-white">Incoming Movies </h3>
-        <div class="section-trending container-md mt-0 mt-lg-5 text-bg-light bg-dark">
-          <div id="in-movie" class="d-flex justify-content-between align-items-sm-center align-items-end mb-5 scroll-wrapper pb-5 ">           
-            <div id="" class="trending-wrapper pb-5">
-            <!-- Cards impcoming Movies -->
+              <div class="row">
+                <div class="col">
+                  <input class="form-control form-control-lg rounded-pill" type="text" placeholder="Buscar..." />
+                </div>
+                <div class="col-auto"><button class="btn btn-outline-warning btn-lg rounded-pill btn-search"
+                    id="submitButton" type="submit">Buscar</button></div>
+              </div>
 
+            </form>
           </div>
-          </div>
-        </div>
-      </section>
-
-    </main>
-    <footer>
-    <div class="container-fluid px-0 py-4 mx-auto bg-dark">
-      <div class="col-12 px-xs-0 col-md-11">
-        <div class="row">
-          <ul class="nav justify-content-center pb-3 mb-3 ">
-            <li class=""><a href="#" class="px-2 text-white-50">Inicio</a></li>
-            <li class="nav-item"><a href="./index.html#trending" class=" px-2 text-white-50">Tendencias</a></li>
-            <li class="nav-item"><a href="./pages/login.html" class=" px-2 text-white-50">Login</a></li>
-            <li class="nav-item"><a href="./pages/register.html" class=" px-2 text-white-50">Registrarse</a></li>
-            <li class="nav-item"><a href="#" class=" px-2 text-white-50">Administrador</a></li>
-          </ul>
-          <p class="text-center text-white-50">© 2024 CaC-Java</p>
         </div>
       </div>
+      </div>
+    </section>
+    <!-- Trending Section -->
+    <section id="trending" class="bg-dark py-5">
+      <div class="section-trending container-md mt-0 mt-lg-5 text-bg-light bg-dark">
+        <h3 class="fw-bold text-white pb-4">Trending Movies</h3>
+        <div id="movie-card" class="movie-grid mb-5 bg-dark">
+        </div>
+      </div>
+    </section>
+    <!-- Incoming Section -->
+    <section id="incoming" class="bg-dark py-5">
+      <div class="section-trending container-md mt-0 mt-lg-5 text-bg-light bg-dark">
+        <h3 class="fw-bold text-white">Incoming Movies</h3>
+        <div class="section-trending container-md mt-0 mt-lg-5 text-bg-light bg-dark">
+          <div id="in-movie"
+            class="d-flex justify-content-between align-items-sm-center align-items-end mb-5 scroll-wrapper pb-5 ">
+            <div id="trending-wrapper" class="trending-wrapper pb-5">
+              <!-- Cards impcoming Movies -->
 
-</footer>
+            </div>
+          </div>
+        </div>
+    </section>
 
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script></body>
-    <script src="./JS/index.js"></script>
-    <script src="./JS/login.js"></script>
+  </main>
+
+  <footer>
+    <div class="container-fluid px-0 py-4 mx-auto bg-dark">
+      <div class="row justify-content-around align-items-center">
+        <ul class="nav justify-content-center pb-3 mb-3">
+          <li class="nav-item"><a href="#" class="px-2 text-white-50">Inicio</a></li>
+          <li class="nav-item"><a href="./index.html#trending" class="px-2 text-white-50">Tendencias</a></li>
+          <li class="nav-item"><a href="./pages/login.html" class="px-2 text-white-50">Login</a></li>
+          <li class="nav-item"><a href="./pages/register.html" class="px-2 text-white-50">Registrarse</a></li>
+          <li class="nav-item"><a href="#" class="px-2 text-white-50">Administrador</a></li>
+        </ul>
+        <p class="text-center text-white-50">© 2024 CaC-Java</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
 </body>
+<script src="./JS/index.js"></script>
+<script src="./JS/login.js"></script>
+</body>
+
 </html>
