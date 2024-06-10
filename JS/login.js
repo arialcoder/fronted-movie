@@ -1,7 +1,6 @@
 
 const formLogin = document.querySelector("#login-form");
 
-const firstName = document.querySelector('#firstName');
 const email = document.querySelector('#email');
 const password = document.querySelector('#password');
 
@@ -11,11 +10,12 @@ const emailError = document.querySelector('#err-email');
 const passwordError = document.querySelector('#err-password');
 const errorMessage = document.querySelector("#error-message");
 
-if(email && password){
-   formLogin.addEventListener('submit', validarLogin)
-}else{
-   console.log("Login Error")
-}
+//formLogin.addEventListener('submit', validarLogin)
+
+ if(email && password){
+    formLogin.addEventListener('submit', validarLogin)
+     
+ }
  
 function validarLogin(event){
    event.preventDefault();
@@ -34,7 +34,7 @@ function validarLogin(event){
     if(password.value === ""){
         passwordError.classList.add("errorMessage");
         passwordError.textContent="La Contraseña no puede estar vacia";  
-          isValid = false;
+        isValid = false;
     } else {
         passwordError.classList.remove("errorMessage");
         passwordError.textContent="";
@@ -74,7 +74,7 @@ function validarLogin(event){
                 alert(`Login Exitoso  ${usuarioEncontrado.username}`)
                 console.log("Login exitoso " + usuarioEncontrado.userEmail)
 
-                var userLogin = usuarioEncontrado.username;
+                //var userLogin = usuarioEncontrado.username;
                 window.location.href = "../index.html";
             }
         } else {
@@ -82,7 +82,7 @@ function validarLogin(event){
         }
     
       }else{
-        console.log("error login")
+        console.log("error login invalido")
       }
 
  }

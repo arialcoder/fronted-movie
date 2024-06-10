@@ -21,18 +21,50 @@ getData();
 const cardMain = document.getElementById("movie-card");
 const incomingCard = document.getElementById("in-movie");
 
-// User Login
+// User Login Nav
 const btnRegister = document.querySelector("#btnRegister");
-const  navbarItem = document.querySelector("#navbarItem");
+const loggedItem = document.querySelector("#logged");
+const logindItem = document.querySelector("#login");
+const logoutItem = document.querySelector("#logout")
+logoutItem.style.display = "none";
 
- // TODO: Verificar si hay un usuario logueado en el localStorage
- var usuarioLogueado = localStorage.getItem("username");
+//let isLogged = false; 
+
+// Verificar si hay un usuario logueado en el localStorage
+const usuarioLogueado = JSON.parse(localStorage.getItem('users'));
+
+if(usuarioLogueado && usuarioLogueado.length > 0){
+  
+ // Desestucturar el array para sacar el username
+ const {username} = usuarioLogueado.find(usuario =>usuario.username)
+
+ //console.log(username)
+
+ if(username){
+
+  loggedItem.textContent = "Usuario: "+ username.toUpperCase();
+  logindItem.style.display = "none";
+  logoutItem.style.display = "block" ; 
+  btnRegister.style.visibility = "hidden";
+  logOut()
+ }else{
+  btnRegister.style.visibility = "show";
+  logindItem.style.display = "true";
+  logoutItem.style.display = "none";
+ }
+}
 
 //  TODO: Crear el contenido dinámico para la barra de navegación
-navbarItem.innerHTML = usuarioLogueado ?
-'<span>Bienvenido, ' + usuarioLogueado.username + '</span>' :
-'<a href="login.html">Login</a>';
-
+// navbarItem.innerHTML = usuarioLogueado ?
+// '<span>Bienvenido, ' + usuarioLogueado.username + '</span>' :
+// '<a href="login.html">Login</a>';
+function logOut(){
+  let logoutItem = document.querySelector("#logout")
+  logoutItem.addEventListener('click', event=>{
+    localStorage.clear()
+    window.location.href = "../index.html"; 
+  })
+ }
 
 function movieCard(array){
     if (array.length == 0){
@@ -82,3 +114,4 @@ function printCard(array) {
 
   incomingCard.innerHTML = card;
 }
+
