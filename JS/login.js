@@ -71,7 +71,7 @@ function validarLogin(event){
             if(usuarioEncontrado){
                 
                 console.log(usuarioEncontrado);
-                alert(`Login Exitoso  ${usuarioEncontrado.username}`)
+                alert(`Login Exitoso  ${usuarioEncontrado.username.toUpperCase()}`)
                 console.log("Login exitoso " + usuarioEncontrado.userEmail)
 
                 //var userLogin = usuarioEncontrado.username;

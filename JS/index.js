@@ -46,7 +46,7 @@ if(usuarioLogueado && usuarioLogueado.length > 0){
   logindItem.style.display = "none";
   logoutItem.style.display = "block" ; 
   btnRegister.style.visibility = "hidden";
-  logOut()
+  
  }else{
   btnRegister.style.visibility = "show";
   logindItem.style.display = "true";
@@ -58,12 +58,13 @@ if(usuarioLogueado && usuarioLogueado.length > 0){
 // navbarItem.innerHTML = usuarioLogueado ?
 // '<span>Bienvenido, ' + usuarioLogueado.username + '</span>' :
 // '<a href="login.html">Login</a>';
+
 function logOut(){
   let logoutItem = document.querySelector("#logout")
   logoutItem.addEventListener('click', event=>{
     localStorage.clear()
-    window.location.href = "../index.html"; 
-  })
+    window.location.reload();
+  })  
  }
 
 function movieCard(array){

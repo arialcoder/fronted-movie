@@ -103,8 +103,8 @@ function validarForm(event){
       return;
     }else{
           console.log("Formulario enviado!!!");
-          // guardar el usuario en la "base de datos" (localstorage)
-  
+
+       // guardar el usuario en la "base de datos" (localstorage)
        const users = JSON.parse(localStorage.getItem("users")) || [];
        const existingUser = users.find((user) => user.username === username);
   
@@ -123,10 +123,11 @@ function validarForm(event){
        users.push(newUser);
   
        localStorage.setItem("users", JSON.stringify(users));
+       alert(`Registro Exitoso! ${newUser.username.toUpperCase()}`)
  
        window.location.href = "login.html";
    
-    console.log(username)
+       console.log(username)
     }
   
 
